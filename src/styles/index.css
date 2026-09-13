@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Manrope", "Inter", system-ui, sans-serif;
+  }
+  body {
+    @apply text-ink dark:text-ink-dark antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-[#242220] rounded-card shadow-sm border border-black/5 dark:border-white/5;
+  }
+  .btn-primary {
+    @apply bg-terracota text-white rounded-full px-4 py-2 text-sm font-semibold hover:bg-terracota-dark transition-colors;
+  }
+  .btn-ghost {
+    @apply rounded-full px-3 py-1.5 text-sm border border-black/10 dark:border-white/10 text-ink dark:text-ink-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors;
+  }
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-muted hover:bg-black/5 dark:hover:bg-white/5 transition-colors;
+  }
+  .nav-item-active {
+    @apply bg-terracota/10 text-terracota;
+  }
+
+  .notes-editor:empty::before {
+    content: attr(data-placeholder);
+    @apply text-muted pointer-events-none;
+  }
+
+  .notes-editor h1 {
+    @apply text-3xl font-bold my-4;
+  }
+
+  .notes-editor h2 {
+    @apply text-2xl font-bold my-3;
+  }
+
+  .notes-editor h3 {
+    @apply text-xl font-semibold my-2;
+  }
+
+  .notes-editor blockquote {
+    @apply border-l-4 border-terracota/40 pl-4 italic text-muted my-3;
+  }
+
+  .notes-editor ul {
+    @apply list-disc pl-6 my-2;
+  }
+
+  .notes-editor ol {
+    @apply list-decimal pl-6 my-2;
+  }
+}
