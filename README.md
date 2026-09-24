@@ -97,3 +97,10 @@ src/
 - [ ] Empacotar para desktop com Tauri (ou Electron) para Windows, macOS e
   Linux.
 - [ ] Adicionar `public/icon-192.png` e `public/icon-512.png` ao PWA.
+      
+    ---
+  ## Dispositivos moveis 
+- [ ] adicionar a responsividade para dispositivos moveis
+- [ ] adicionar uma forma de deixar os dados salvos mesmo quando o app não tive internet
+- [ ] colocar botões de navegação para dispositivos moveis
+- [ ] ver como que faz para poder clicar o app para celuar
